@@ -10,11 +10,13 @@ for (let i = 0; i < numberOfDrumsButton; i++) {
   document.querySelectorAll(".drum")[i].addEventListener("click", function () {
     let buttonInnerHTML = this.innerHTML;
     button(buttonInnerHTML);
+    butonAnimation(buttonInnerHTML);
   });
 }
 
 document.addEventListener("keypress", function (event) {
   button(event.key); //keyproperty of the event
+  butonAnimation(event.key);
 });
 
 function button(key) {
@@ -51,4 +53,13 @@ function button(key) {
     default:
       console.log(buttonInnerHTML);
   }
+}
+
+function butonAnimation(currentKey)
+{
+    let activeButton = document.querySelector("."+currentKey);
+    activeButton.classList.add("pressed");
+    setTimeout(function(){
+        activeButton.classList.remove("pressed");
+    },100);
 }
