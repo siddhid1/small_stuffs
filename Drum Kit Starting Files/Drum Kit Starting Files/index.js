@@ -19,8 +19,8 @@ document.addEventListener("keypress", function (event) {
   butonAnimation(event.key);
 });
 
-function button(key) {
-  switch (key) {
+function button(lol) {
+  switch (lol) {
     case "w":
       let tom1 = new Audio("sounds/tom-1.mp3");
       tom1.play();
@@ -46,7 +46,7 @@ function button(key) {
       crash.play();
       break;
     case "l":
-      let kick = new Audio("sounds/kick.mp3");
+      let kick = new Audio("sounds/kick-bass.mp3");
       kick.play();
       break;
 
