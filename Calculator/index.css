@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@layer components{
+   .btn{
+    @apply bg-green-400 hover:bg-green-800 rounded-full p-3;
+   }
+}
+@tailwind utilities;
